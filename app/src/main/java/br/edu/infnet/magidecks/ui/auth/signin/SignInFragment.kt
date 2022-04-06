@@ -1,6 +1,7 @@
 package br.edu.infnet.magidecks.ui.auth.signin
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +12,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.edu.infnet.magidecks.R
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SignInFragment : Fragment() {
 
@@ -20,6 +30,8 @@ class SignInFragment : Fragment() {
     private lateinit var btnAcessar: Button
     private lateinit var cbLembrar: CheckBox
     private lateinit var lblCadastrarse: TextView
+    private lateinit var callbackManager: CallbackManager
+    private lateinit var buttonFacebookLogin: LoginButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +40,24 @@ class SignInFragment : Fragment() {
         val view = inflater.inflate(R.layout.sign_in_fragment, container, false)
         setupViewModel()
         setupWidgets(view)
+        callbackManager = CallbackManager.Factory.create()
+        buttonFacebookLogin.fragment = this
+        buttonFacebookLogin.setReadPermissions("email", "public_profile")
+        buttonFacebookLogin.registerCallback(callbackManager, object :
+            FacebookCallback<LoginResult> {
+            override fun onSuccess(loginResult: LoginResult) {
+                handleFacebookAccessToken(loginResult.accessToken)
+                makeToast("Autenticação por facebook sucesso.")
+            }
 
+            override fun onCancel() {
+                makeToast("Autenticação por facebook cancelada.")
+            }
+
+            override fun onError(error: FacebookException) {
+                makeToast("Autenticação por facebook falhou.")
+            }
+        })
         return view
     }
 
@@ -62,6 +91,7 @@ class SignInFragment : Fragment() {
         lblCadastrarse = view.findViewById(R.id.sign_in_fragment_lbl_cadastrarse)
         btnAcessar = view.findViewById(R.id.sign_in_fragment_btn_acessar)
         cbLembrar = view.findViewById(R.id.sign_in_fragment_cb_lembrar_email)
+        buttonFacebookLogin = view.findViewById(R.id.login_button)
     }
 
     private fun setupViewModel() {
@@ -98,4 +128,22 @@ class SignInFragment : Fragment() {
         txtEmail.setText(email)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Pass the activity result back to the Facebook SDK
+        callbackManager.onActivityResult(requestCode, resultCode, data)
+    }
+
+    private fun handleFacebookAccessToken(token: AccessToken) {
+
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        Firebase.auth.signInWithCredential(credential)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    findNavController().navigate(R.id.decksFragment)
+                }
+            }
+
+    }
 }

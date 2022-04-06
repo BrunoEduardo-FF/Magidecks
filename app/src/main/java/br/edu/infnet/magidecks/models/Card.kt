@@ -10,7 +10,7 @@ class Card(
     val rarity: String = "",
     val power: String = "",
     val toughness: String = "",
-    val imageUrl: String = "",
+    //val imageUrl: String = "",
     val text: String = "",
     var deckId: String = "",
     @DocumentId val id: String? = null

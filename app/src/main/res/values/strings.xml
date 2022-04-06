@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Magidecks</string>
     <string name="faltaEmailSenha">E-mail ou senha não preenchidos.</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="DOCUMENT_ID_REQUEST">DocumentId</string>
     <string name="DOCUMENT_NAME_REQUEST">DocumentName</string>"
     <string name="CARD_REQUEST">CardRequest</string>
+    <string name="facebook_app_id">303625065190463</string>
+    <string name="fb_login_protocol_scheme">fb303625065190463</string>
+    <string name="facebook_client_token">63c8308d0e9cca0e7bb20532b20477df</string>
 </resources>
