@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845631463131",
+    "project_id": "magidecks",
+    "storage_bucket": "magidecks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845631463131:android:197a4d3de88945852b76fe",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.magidecks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845631463131-c0us4dkenge2kqhauvp9phuh2u5uqdsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAchizeK7JpafkZxwAVf-GrxecQfNIPL9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845631463131-c0us4dkenge2kqhauvp9phuh2u5uqdsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

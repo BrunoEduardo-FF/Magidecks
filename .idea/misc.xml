@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/add_card_fragment.xml" value="0.4353393085787452" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/add_deck_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/cards_fragment.xml" value="0.24210526315789474" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/decks_fragment.xml" value="0.16626506024096385" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/detail_card_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/edit_deck_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/recycler_cards_item.xml" value="0.4" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/recycler_deck_item.xml" value="0.536" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/recycler_search_cards_item.xml" value="0.536" />
+        <entry key="..\:/Users/Bruno/OneDrive/Infnet/Bloco2_DesenvolvimentoKotlinAndroid/Magidecks/app/src/main/res/layout/sign_in_fragment.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
