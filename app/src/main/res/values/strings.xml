@@ -5,7 +5,7 @@
     <string name="DOCUMENT_ID_REQUEST">DocumentId</string>
     <string name="DOCUMENT_NAME_REQUEST">DocumentName</string>"
     <string name="CARD_REQUEST">CardRequest</string>
-    <string name="facebook_app_id">303625065190463</string>
-    <string name="fb_login_protocol_scheme">fb303625065190463</string>
-    <string name="facebook_client_token">63c8308d0e9cca0e7bb20532b20477df</string>
+    <string name="facebook_app_id">appid</string>
+    <string name="fb_login_protocol_scheme">fbappid</string>
+    <string name="facebook_client_token">clientToken</string>
 </resources>
